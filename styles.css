@@ -1,0 +1,174 @@
+                                          body {
+                                      font-family: 'Orbitron', sans-serif;
+                                      text-align: center;
+                                      background-image: url('space_bg.jpg');
+                                      /* Replace with your space background */
+                                      background-size: cover;
+                                      background-attachment: fixed;
+                                      color: #fff;
+                                      margin: 0;
+                                      padding: 0;
+                                      overflow-x: hidden;
+                                      font-family: sans-serif;
+                                      margin: 20px;
+                                      /* Added margin for spacing */
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      min-height: 100vh;
+                                      background-color: #f4f4f4;
+                                      font-family: sans-serif;
+                                      margin: 20px;
+                                      /* Added margin for spacing */
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                      min-height: 100vh;
+                                      background-color: #f4f4f4;
+                                  }
+                                  
+                                  .container {
+                                      max-width: 800px;
+                                      margin: 20px auto;
+                                      padding: 30px;
+                                      background: rgba(0, 0, 0, 0.8);
+                                      border-radius: 25px;
+                                      box-shadow: 0 0 40px rgba(0, 191, 255, 0.7);
+                                      border: 5px solid #00bfff;
+                                  }
+                                  
+                                  h1 {
+                                      font-size: 3.5rem;
+                                      color: #00bfff;
+                                      text-shadow: 3px 3px #1e90ff, 5px 5px #4682b4;
+                                      font-family: 'Press Start 2P', cursive;
+                                  }
+                                  
+                                  .category-selection button {
+                                      padding: 18px 35px;
+                                      margin: 12px;
+                                      font-size: 22px;
+                                      cursor: pointer;
+                                      border: none;
+                                      border-radius: 20px;
+                                      background: linear-gradient(45deg, #4682b4, #00bfff, #1e90ff);
+                                      color: #fff;
+                                      box-shadow: 0 6px 18px rgba(0, 191, 255, 0.6);
+                                      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+                                      font-family: 'Orbitron', sans-serif;
+                                  }
+                                  
+                                  .category-selection button:hover {
+                                      transform: scale(1.1);
+                                      box-shadow: 0 10px 25px rgba(0, 191, 255, 0.8);
+                                  }
+                                  
+                                  .game-container {
+                                      margin-top: 40px;
+                                  }
+                                  
+                                  #game-board {
+                                      display: grid;
+                                      grid-template-columns: repeat(4, 1fr);
+                                      gap: 25px;
+                                      margin-top: 30px;
+                                      padding: 30px;
+                                      background: rgba(255, 255, 255, 0.1);
+                                      border-radius: 25px;
+                                      box-shadow: 0 0 30px rgba(0, 191, 255, 0.5);
+                                  }
+                                  
+                                  .card {
+                                      width: 120px;
+                                      height: 120px;
+                                      background: #483d8b;
+                                      display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      font-size: 40px;
+                                      cursor: pointer;
+                                      border-radius: 20px;
+                                      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+                                      transition: transform 0.6s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+                                  }
+                                  
+                                  .card.flipped {
+                                      transform: rotateY(180deg);
+                                      background: #6a5acd;
+                                      color: #fff;
+                                      box-shadow: 0 6px 18px rgba(106, 90, 205, 0.8);
+                                  }
+                                  
+                                  .card.matched {
+                                      background: #00bfff;
+                                      animation: pop 0.6s ease;
+                                  }
+                                  
+                                  @keyframes pop {
+                                      0% {
+                                          transform: scale(1);
+                                      }
+                                      50% {
+                                          transform: scale(1.2);
+                                      }
+                                      100% {
+                                          transform: scale(1);
+                                      }
+                                  }
+                                  
+                                  #restart {
+                                      padding: 18px 35px;
+                                      font-size: 24px;
+                                      border: none;
+                                      border-radius: 20px;
+                                      background: linear-gradient(45deg, #1e90ff, #00bfff);
+                                      color: #fff;
+                                      box-shadow: 0 6px 18px rgba(30, 144, 255, 0.6);
+                                      transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+                                      margin: 20px 15px;
+                                      font-family: 'Orbitron', sans-serif;
+                                  }
+                                  
+                                  #restart:hover {
+                                      transform: scale(1.1);
+                                      box-shadow: 0 10px 25px rgba(30, 144, 255, 0.8);
+                                  }
+                                  
+                                  .game-info {
+                                      display: flex;
+                                      justify-content: space-between;
+                                      align-items: center;
+                                      margin-top: 30px;
+                                      padding: 20px;
+                                      background: linear-gradient(45deg, #483d8b, #6a5acd);
+                                      border-radius: 20px;
+                                      color: #fff;
+                                      font-size: 26px;
+                                      font-weight: bold;
+                                      box-shadow: 0 6px 18px rgba(106, 90, 205, 0.6);
+                                      text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+                                  }
+                                  
+                                  .game-info p {
+                                      margin: 0;
+                                      padding: 8px 25px;
+                                      display: inline-block;
+                                  }
+                                  
+                                  #timer {
+                                      font-size: 30px;
+                                      font-weight: bold;
+                                      color: #ffd700;
+                                      animation: pulse 1.2s infinite alternate;
+                                      margin: 0 15px;
+                                  }
+                                  
+                                  #score {
+                                      font-size: 30px;
+                                      font-weight: bold;
+                                      color: #00ff7f;
+                                      margin: 0 15px;
+                                  }
+                                  
+                                  @keyframes pulse {
+                                      0% {
